@@ -1,0 +1,13 @@
+[package]
+name = "reco-convert"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+image.workspace = true
+infer.workspace = true
+pdf.workspace = true
+reco.workspace = true
+thiserror.workspace = true
+tracing.workspace = true

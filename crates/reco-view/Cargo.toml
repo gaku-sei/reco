@@ -1,0 +1,17 @@
+[package]
+name = "reco-view"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+catppuccin-egui.workspace = true
+eframe.workspace = true
+egui.workspace = true
+egui_router.workspace = true
+image.workspace = true
+infer.workspace = true
+reco.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+zip.workspace = true

@@ -1,0 +1,20 @@
+[package]
+name = "reco-cli"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+clap.workspace = true
+image.workspace = true
+reco.workspace = true
+reco-convert.workspace = true
+reco-enhance = { workspace = true, optional = true }
+reco-merge.workspace = true
+reco-pack.workspace = true
+reco-view.workspace = true
+tracing-subscriber.workspace = true
+
+[features]
+enhance = ["dep:reco-enhance"]

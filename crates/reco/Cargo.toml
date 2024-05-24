@@ -1,0 +1,12 @@
+[package]
+name = "reco"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+image.workspace = true
+infer.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+zip.workspace = true

@@ -1,0 +1,17 @@
+[package]
+name = "reco-gui"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+catppuccin-egui.workspace = true
+clap.workspace = true
+eframe.workspace = true
+egui.workspace = true
+egui_inbox.workspace = true
+egui_router.workspace = true
+reco-view.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
