@@ -3,7 +3,7 @@ resolver = "3"
 members = ["crates/*"]
 
 [workspace.package]
-rust-version = "1.88.0"
+rust-version = "1.89.0"
 edition = "2024"
 
 [workspace.dependencies]
@@ -13,17 +13,16 @@ async-trait = "0.1.89"
 base64 = "0.22.1"
 camino = "1.1.12"
 catppuccin-egui = { version = "5.6", default-features = false, features = ["egui32"] }
-clap = { version = "4.5.46", features = ["derive"] }
+clap = { version = "4.5.47", features = ["derive"] }
 cli-table = "0.5.0"
-chrono = "0.4.41"
+chrono = "0.4.42"
 dark-light = "2.0.0"
 dialoguer = "0.12.0"
 dioxus = "0.6.3"
 dioxus-desktop = "0.6.3"
 dunce = "1.0.5"
-# eframe = { version = "0.32.1", features = ["wgpu"] }
-eframe = "0.32.1"
-egui = "0.32.1"
+eframe = "0.32.3"
+egui = "0.32.3"
 egui_inbox = "0.9.0"
 egui_router = "0.5.0"
 epub = "2.1.4"
@@ -32,7 +31,7 @@ glob = "0.3.3"
 home = "0.5.11"
 html5ever = "0.35.0"
 iced = "0.13.1"
-image = "0.25.7"
+image = "0.25.8"
 indicatif = "0.18.0"
 infer = { version = "0.19.0", default-features = false }
 isolang = "2.4"
@@ -64,4 +63,4 @@ tokio = { version = "1.47.1", features = ["full"] }
 tracing = "0.1.41"
 tracing-subscriber = "0.3.20"
 url = "2.5.7"
-zip = "4.6.0"
+zip = "5.1.1"
