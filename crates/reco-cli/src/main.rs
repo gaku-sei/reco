@@ -62,24 +62,6 @@ enum Command {
         /// Path to the archive to view
         path: PathBuf,
     },
-
-    #[cfg(feature = "enhance")]
-    Enhance {
-        /// Path to the cbz file to enhance
-        input: PathBuf,
-
-        /// Path to the enhanced cbz
-        #[clap(default_value = ".")]
-        output: PathBuf,
-
-        /// Threads to use
-        #[clap(long, default_value_t = 4)]
-        max_threads: usize,
-
-        /// Path to the onnx runtime
-        #[clap(long)]
-        onnx_runtime_path: Option<PathBuf>,
-    },
 }
 
 fn main() -> Result<()> {
@@ -114,18 +96,6 @@ fn main() -> Result<()> {
             reco_merge::merge(&pattern, &path)?;
         }
         Command::View { path } => reco_view::view(&path)?,
-        #[cfg(feature = "enhance")]
-        Command::Enhance {
-            input,
-            output,
-            max_threads,
-            onnx_runtime_path,
-        } => {
-            if let Some(onnx_runtime_path) = onnx_runtime_path {
-                reco_enhance::init(&onnx_runtime_path)?;
-            }
-            reco_enhance::enhance(&input, &output, max_threads)?;
-        }
     }
 
     Ok(())
