@@ -1,6 +1,2 @@
 /target
 /test
-/models/*
-!/models/.gitkeep
-/vendors/*
-!/vendors/.gitkeep

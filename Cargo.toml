@@ -46,7 +46,6 @@ pdf = "0.9.0"
 rayon = "1.11.0"
 reco = { path = "./crates/reco" }
 reco-convert = { path = "./crates/reco-convert" }
-reco-enhance = { path = "./crates/reco-enhance" }
 reco-merge = { path = "./crates/reco-merge" }
 reco-pack = { path = "./crates/reco-pack" }
 reco-view = { path = "./crates/reco-view" }
