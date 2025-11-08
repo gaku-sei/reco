@@ -14,7 +14,7 @@ The repository host multiple cli and gui that allows you to edit, convert, merge
 Converts e-books from pdf to cbz (only now):
 
 ```bash
-reco-cli convert "archive.pdf" [outdir="."] [filename="out.cbz"]
+reco-cli convert "archive.pdf" [outdir="."] [filename="archive.cbz"]
 ```
 
 ## Reco Merge (cbz only for now)
