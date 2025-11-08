@@ -1,10 +1,11 @@
 #![deny(clippy::all, clippy::pedantic, clippy::unwrap_used)]
-#![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 use std::path::PathBuf;
 
 use anyhow::Result;
 use clap::{Parser, Subcommand};
+
+static DEFAULT_FILENAME: &str = "out.cbz";
 
 #[derive(Debug, Parser)]
 #[command(version, about, long_about = None)]
@@ -23,9 +24,8 @@ enum Command {
         #[clap(default_value = ".")]
         output: PathBuf,
 
-        /// The file name of the archive file
-        #[clap(default_value = "out.cbz")]
-        filename: String,
+        /// The file name of the archive file (defaults to the file stem + cbz or out.cbz if none is found)
+        filename: Option<String>,
     },
 
     Pack {
@@ -37,7 +37,7 @@ enum Command {
         output: PathBuf,
 
         /// The file name of the archive file
-        #[clap(default_value = "out.cbz")]
+        #[clap(default_value = DEFAULT_FILENAME)]
         filename: String,
 
         /// Automatically split landscape images into 2 pages
@@ -54,7 +54,7 @@ enum Command {
         output: PathBuf,
 
         /// The file name of the archive file
-        #[clap(default_value = "out.cbz")]
+        #[clap(default_value = DEFAULT_FILENAME)]
         filename: String,
     },
 
@@ -74,6 +74,13 @@ fn main() -> Result<()> {
             output,
             filename,
         } => {
+            let filename = filename
+                .or_else(|| {
+                    path.file_stem()
+                        .and_then(|stem| stem.to_str())
+                        .map(|stem| format!("{stem}.cbz"))
+                })
+                .unwrap_or_else(|| DEFAULT_FILENAME.to_string());
             let output_path = output.join(filename);
             reco_convert::convert(&path, &output_path)?;
         }
