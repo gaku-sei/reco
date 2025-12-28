@@ -6,7 +6,6 @@ use image::{DynamicImage, ImageReader};
 use pdf::enc::StreamFilter;
 use pdf::file::{File as PdfFile, FileOptions as PdfFileOptions, NoLog, ObjectCache, StreamCache};
 use pdf::object::{Ref, Resolve, XObject};
-use tracing::error;
 
 use crate::Error;
 

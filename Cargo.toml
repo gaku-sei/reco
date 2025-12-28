@@ -3,63 +3,63 @@ resolver = "3"
 members = ["crates/*"]
 
 [workspace.package]
-rust-version = "1.89.0"
+rust-version = "1.92.0"
 edition = "2024"
 
 [workspace.dependencies]
-anyhow = "1.0.99"
+anyhow = "1.0.100"
 async-recursion = "1.1.1"
 async-trait = "0.1.89"
 base64 = "0.22.1"
-camino = "1.1.12"
-catppuccin-egui = { version = "5.6", default-features = false, features = ["egui32"] }
-clap = { version = "4.5.47", features = ["derive"] }
+camino = "1.2.2"
+catppuccin-egui = { version = "5.7", default-features = false, features = ["egui33"] }
+clap = { version = "4.5.53", features = ["derive"] }
 cli-table = "0.5.0"
 chrono = "0.4.42"
 dark-light = "2.0.0"
 dialoguer = "0.12.0"
-dioxus = "0.6.3"
-dioxus-desktop = "0.6.3"
+dioxus = "0.7.2"
+dioxus-desktop = "0.7.2"
 dunce = "1.0.5"
-eframe = "0.32.3"
-egui = "0.32.3"
-egui_inbox = "0.9.0"
-egui_router = "0.5.0"
-epub = "2.1.4"
+eframe = "0.33.3"
+egui = "0.33.3"
+egui_inbox = "0.10.0"
+egui_router = "0.6.0"
+epub = "2.1.5"
 futures = "0.3.31"
 glob = "0.3.3"
-home = "0.5.11"
-html5ever = "0.35.0"
-iced = "0.13.1"
-image = "0.25.8"
-indicatif = "0.18.0"
+home = "0.5.12"
+html5ever = "0.36.1"
+iced = "0.14.0"
+image = "0.25.9"
+indicatif = "0.18.3"
 infer = { version = "0.19.0", default-features = false }
 isolang = "2.4"
 lexical-sort = "0.3.1"
-markup5ever_rcdom = "0.35.0"
+markup5ever_rcdom = "0.36.0"
 mime = "0.3.17"
 mobi = "0.8.0"
-ndarray = "0.16.1"
+ndarray = "0.17.1"
 ort = { version = "2.0.0-rc.10", features = ["load-dynamic"] }
-parking_lot = "0.12.4"
-pdf = "0.9.0"
+parking_lot = "0.12.5"
+pdf = "0.9.1"
 rayon = "1.11.0"
 reco = { path = "./crates/reco" }
 reco-convert = { path = "./crates/reco-convert" }
 reco-merge = { path = "./crates/reco-merge" }
 reco-pack = { path = "./crates/reco-pack" }
 reco-view = { path = "./crates/reco-view" }
-reqwest = "0.12.23"
+reqwest = "0.12.28"
 reqwest-middleware = "0.4.2"
-reqwest-retry = "0.7.0"
+reqwest-retry = "0.8.0"
 sanitize-filename = "0.6.0"
-serde = "1.0.219"
-serde_json = "1.0.143"
+serde = "1.0.228"
+serde_json = "1.0.148"
 serde_repr = "0.1.20"
 tl = "0.7.8"
-thiserror = "2.0.16"
-tokio = { version = "1.47.1", features = ["full"] }
-tracing = "0.1.41"
-tracing-subscriber = "0.3.20"
+thiserror = "2.0.17"
+tokio = { version = "1.48.0", features = ["full"] }
+tracing = "0.1.44"
+tracing-subscriber = "0.3.22"
 url = "2.5.7"
-zip = "5.1.1"
+zip = "7.0.0"
